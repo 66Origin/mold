@@ -1,3 +1,5 @@
+extern crate parking_lot;
+
 use parking_lot::RwLock;
 use std::any::{Any, TypeId};
 use std::collections::HashMap;
@@ -36,9 +38,7 @@ impl Container {
         T: Any + Send + Sync + 'static,
         C: Fn() -> Box<Any + Send + Sync + 'static> + 'static,
     {
-        self.init
-            .write()
-            .insert(TypeId::of::<T>(), Box::new(factory));
+        self.init.write().insert(TypeId::of::<T>(), Box::new(factory));
 
         self
     }
