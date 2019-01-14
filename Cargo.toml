@@ -1,9 +1,8 @@
 [package]
-name = "mold"
-version = "0.1.0"
-authors = ["Mathieu Amiot <m.amiot@otak-arts.com>"]
+authors = ["Mathieu Amiot <mathieu.amiot@yellowinnovation.fr>"]
 edition = "2018"
+name = "mold"
+version = "0.0.1"
 
 [dependencies]
-hashbrown = "0.1.7"
 parking_lot = "0.7.1"
